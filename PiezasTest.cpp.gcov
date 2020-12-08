@@ -1,0 +1,2511 @@
+        -:    0:Source:PiezasTest.cpp
+        -:    0:Programs:2
+        -:    1:/**
+        -:    2: * Unit Tests for Piezas
+        -:    3:**/
+        -:    4:
+        -:    5:#include <gtest/gtest.h>
+        -:    6:#include "Piezas.h"
+        -:    7: 
+        -:    8:class PiezasTest : public ::testing::Test
+        -:    9:{
+        -:   10:	protected:
+        -:   11:		PiezasTest(){} //constructor runs before each test
+        -:   12:		virtual ~PiezasTest(){} //destructor cleans up after tests
+        -:   13:		virtual void SetUp(){} //sets up before each test (after constructor)
+        -:   14:		virtual void TearDown(){} //clean up after each test, (before destructor) 
+        -:   15:};
+        -:   16:
+function _ZN27PiezasTest_sanityCheck_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN27PiezasTest_sanityCheck_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN27PiezasTest_sanityCheck_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN27PiezasTest_sanityCheck_Test8TestBodyEv called 1 returned 100% blocks executed 36%
+        5:   17:TEST(PiezasTest, sanityCheck)
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 0 (fallthrough)
+branch 27 taken 1
+call   28 never executed
+        -:   18:{
+        1:   19:	ASSERT_TRUE(true);
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+call    7 never executed
+branch  8 never executed
+branch  9 never executed
+call   10 never executed
+call   11 never executed
+branch 12 never executed
+branch 13 never executed
+call   14 never executed
+branch 15 never executed
+branch 16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+call   20 returned 1
+branch 21 taken 1
+branch 22 taken 0
+call   23 never executed
+call   24 never executed
+call   25 never executed
+call   26 never executed
+        -:   20:}
+        -:   21:
+function _ZN23PiezasTest_placedX_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN23PiezasTest_placedX_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN23PiezasTest_placedX_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN23PiezasTest_placedX_Test8TestBodyEv called 1 returned 100% blocks executed 46%
+        5:   22:TEST(PiezasTest, placedX)
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 0 (fallthrough)
+branch 27 taken 1
+call   28 never executed
+        -:   23:{
+        2:   24:	Piezas obj;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        1:   25:	Piece placed = Invalid;
+        1:   26:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   27:	ASSERT_EQ(X, placed);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+call   16 never executed
+call   17 never executed
+call   18 returned 1
+branch 19 taken 1
+branch 20 taken 0
+call   21 returned 1
+branch 22 taken 1
+branch 23 taken 0
+call   24 never executed
+call   25 never executed
+call   26 never executed
+        -:   28:}
+        -:   29:
+function _ZN29PiezasTest_placedDoubleO_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN29PiezasTest_placedDoubleO_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN29PiezasTest_placedDoubleO_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN29PiezasTest_placedDoubleO_Test8TestBodyEv called 1 returned 100% blocks executed 47%
+        5:   30:TEST(PiezasTest, placedDoubleO)
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 0 (fallthrough)
+branch 27 taken 1
+call   28 never executed
+        -:   31:{
+        2:   32:	Piezas obj;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        1:   33:	Piece placed = Invalid;
+        1:   34:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   35:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   36:	ASSERT_EQ(O, placed);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+call   16 never executed
+call   17 never executed
+call   18 returned 1
+branch 19 taken 1
+branch 20 taken 0
+call   21 returned 1
+branch 22 taken 1
+branch 23 taken 0
+call   24 never executed
+call   25 never executed
+call   26 never executed
+        -:   37:}
+        -:   38:
+function _ZN29PiezasTest_placedTripple_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN29PiezasTest_placedTripple_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN29PiezasTest_placedTripple_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN29PiezasTest_placedTripple_Test8TestBodyEv called 1 returned 100% blocks executed 49%
+        5:   39:TEST(PiezasTest, placedTripple)
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 0 (fallthrough)
+branch 27 taken 1
+call   28 never executed
+        -:   40:{
+        2:   41:	Piezas obj;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        1:   42:	Piece placed = Invalid;
+        1:   43:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   44:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   45:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   46:	ASSERT_EQ(X, placed);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+call   16 never executed
+call   17 never executed
+call   18 returned 1
+branch 19 taken 1
+branch 20 taken 0
+call   21 returned 1
+branch 22 taken 1
+branch 23 taken 0
+call   24 never executed
+call   25 never executed
+call   26 never executed
+        -:   47:}
+        -:   48:
+function _ZN26PiezasTest_placedQuad_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN26PiezasTest_placedQuad_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN26PiezasTest_placedQuad_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN26PiezasTest_placedQuad_Test8TestBodyEv called 1 returned 100% blocks executed 50%
+        5:   49:TEST(PiezasTest, placedQuad)
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 0 (fallthrough)
+branch 27 taken 1
+call   28 never executed
+        -:   50:{
+        2:   51:	Piezas obj;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        1:   52:	Piece placed = Invalid;
+        1:   53:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   54:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   55:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   56:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   57:
+        1:   58:	ASSERT_EQ(Blank, placed);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+call   16 never executed
+call   17 never executed
+call   18 returned 1
+branch 19 taken 1
+branch 20 taken 0
+call   21 returned 1
+branch 22 taken 1
+branch 23 taken 0
+call   24 never executed
+call   25 never executed
+call   26 never executed
+        -:   59:}
+        -:   60:
+function _ZN30PiezasTest_piece_at_reset_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN30PiezasTest_piece_at_reset_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN30PiezasTest_piece_at_reset_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN30PiezasTest_piece_at_reset_Test8TestBodyEv called 1 returned 100% blocks executed 52%
+        5:   61:TEST(PiezasTest, piece_at_reset)
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 0 (fallthrough)
+branch 27 taken 1
+call   28 never executed
+        -:   62:{
+        2:   63:	Piezas obj;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        1:   64:	Piece placed = Invalid;
+        1:   65:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   66:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   67:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   68:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   69:	obj.reset();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   70:	placed = obj.pieceAt(0,0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   71:
+        1:   72:	ASSERT_EQ(Blank, placed);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+call   16 never executed
+call   17 never executed
+call   18 returned 1
+branch 19 taken 1
+branch 20 taken 0
+call   21 returned 1
+branch 22 taken 1
+branch 23 taken 0
+call   24 never executed
+call   25 never executed
+call   26 never executed
+        -:   73:}
+        -:   74:
+function _ZN41PiezasTest_piece_at_first_quadPlaced_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN41PiezasTest_piece_at_first_quadPlaced_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN41PiezasTest_piece_at_first_quadPlaced_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN41PiezasTest_piece_at_first_quadPlaced_Test8TestBodyEv called 1 returned 100% blocks executed 51%
+        5:   75:TEST(PiezasTest, piece_at_first_quadPlaced)
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 0 (fallthrough)
+branch 27 taken 1
+call   28 never executed
+        -:   76:{
+        2:   77:	Piezas obj;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        1:   78:	Piece placed = Invalid;
+        1:   79:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   80:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   81:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   82:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   83:	placed = obj.pieceAt(0, 0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   84:
+        1:   85:	ASSERT_EQ(X, placed);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+call   16 never executed
+call   17 never executed
+call   18 returned 1
+branch 19 taken 1
+branch 20 taken 0
+call   21 returned 1
+branch 22 taken 1
+branch 23 taken 0
+call   24 never executed
+call   25 never executed
+call   26 never executed
+        -:   86:}
+        -:   87:
+function _ZN42PiezasTest_piece_at_second_quadPlaced_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN42PiezasTest_piece_at_second_quadPlaced_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN42PiezasTest_piece_at_second_quadPlaced_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN42PiezasTest_piece_at_second_quadPlaced_Test8TestBodyEv called 1 returned 100% blocks executed 51%
+        5:   88:TEST(PiezasTest, piece_at_second_quadPlaced)
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 0 (fallthrough)
+branch 27 taken 1
+call   28 never executed
+        -:   89:{
+        2:   90:	Piezas obj;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        1:   91:	Piece placed = Invalid;
+        1:   92:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   93:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   94:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   95:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   96:	placed = obj.pieceAt(1, 0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   97:
+        1:   98:	ASSERT_EQ(O, placed);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+call   16 never executed
+call   17 never executed
+call   18 returned 1
+branch 19 taken 1
+branch 20 taken 0
+call   21 returned 1
+branch 22 taken 1
+branch 23 taken 0
+call   24 never executed
+call   25 never executed
+call   26 never executed
+        -:   99:}
+        -:  100:
+function _ZN41PiezasTest_piece_at_Third_quadPlaced_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN41PiezasTest_piece_at_Third_quadPlaced_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN41PiezasTest_piece_at_Third_quadPlaced_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN41PiezasTest_piece_at_Third_quadPlaced_Test8TestBodyEv called 1 returned 100% blocks executed 51%
+        5:  101:TEST(PiezasTest, piece_at_Third_quadPlaced)
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 0 (fallthrough)
+branch 27 taken 1
+call   28 never executed
+        -:  102:{
+        2:  103:	Piezas obj;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        1:  104:	Piece placed = Invalid;
+        1:  105:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  106:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  107:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  108:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  109:	placed = obj.pieceAt(2, 0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  110:
+        1:  111:	ASSERT_EQ(X, placed);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+call   16 never executed
+call   17 never executed
+call   18 returned 1
+branch 19 taken 1
+branch 20 taken 0
+call   21 returned 1
+branch 22 taken 1
+branch 23 taken 0
+call   24 never executed
+call   25 never executed
+call   26 never executed
+        -:  112:}
+        -:  113:
+function _ZN39PiezasTest_piece_at_fourth_Invalid_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN39PiezasTest_piece_at_fourth_Invalid_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN39PiezasTest_piece_at_fourth_Invalid_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN39PiezasTest_piece_at_fourth_Invalid_Test8TestBodyEv called 1 returned 100% blocks executed 51%
+        5:  114:TEST(PiezasTest, piece_at_fourth_Invalid)
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 0 (fallthrough)
+branch 27 taken 1
+call   28 never executed
+        -:  115:{
+        2:  116:	Piezas obj;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        1:  117:	Piece placed = Invalid;
+        1:  118:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  119:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  120:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  121:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  122:	placed = obj.pieceAt(3, 0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  123:
+        1:  124:	ASSERT_EQ(Invalid, placed);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+call   16 never executed
+call   17 never executed
+call   18 returned 1
+branch 19 taken 1
+branch 20 taken 0
+call   21 returned 1
+branch 22 taken 1
+branch 23 taken 0
+call   24 never executed
+call   25 never executed
+call   26 never executed
+        -:  125:}
+        -:  126:
+function _ZN36PiezasTest_piece_at_outOfBounds_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN36PiezasTest_piece_at_outOfBounds_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN36PiezasTest_piece_at_outOfBounds_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN36PiezasTest_piece_at_outOfBounds_Test8TestBodyEv called 1 returned 100% blocks executed 51%
+        5:  127:TEST(PiezasTest, piece_at_outOfBounds)
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 0 (fallthrough)
+branch 27 taken 1
+call   28 never executed
+        -:  128:{
+        2:  129:	Piezas obj;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        1:  130:	Piece placed = Invalid;
+        1:  131:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  132:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  133:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  134:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  135:	placed = obj.pieceAt(4, 0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  136:
+        1:  137:	ASSERT_EQ(Invalid, placed);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+call   16 never executed
+call   17 never executed
+call   18 returned 1
+branch 19 taken 1
+branch 20 taken 0
+call   21 returned 1
+branch 22 taken 1
+branch 23 taken 0
+call   24 never executed
+call   25 never executed
+call   26 never executed
+        -:  138:}
+        -:  139:
+function _ZN41PiezasTest_piece_at_quadPlaced_Blank_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN41PiezasTest_piece_at_quadPlaced_Blank_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN41PiezasTest_piece_at_quadPlaced_Blank_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN41PiezasTest_piece_at_quadPlaced_Blank_Test8TestBodyEv called 1 returned 100% blocks executed 51%
+        5:  140:TEST(PiezasTest, piece_at_quadPlaced_Blank)
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 0 (fallthrough)
+branch 27 taken 1
+call   28 never executed
+        -:  141:{
+        2:  142:	Piezas obj;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        1:  143:	Piece placed = Invalid;
+        1:  144:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  145:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  146:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  147:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  148:	placed = obj.pieceAt(0, 1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  149:
+        1:  150:	ASSERT_EQ(Blank, placed);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+call   16 never executed
+call   17 never executed
+call   18 returned 1
+branch 19 taken 1
+branch 20 taken 0
+call   21 returned 1
+branch 22 taken 1
+branch 23 taken 0
+call   24 never executed
+call   25 never executed
+call   26 never executed
+        -:  151:}
+        -:  152:
+function _ZN36PiezasTest_placedQuadPassIfNotO_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN36PiezasTest_placedQuadPassIfNotO_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN36PiezasTest_placedQuadPassIfNotO_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN36PiezasTest_placedQuadPassIfNotO_Test8TestBodyEv called 1 returned 100% blocks executed 50%
+        5:  153:TEST(PiezasTest, placedQuadPassIfNotO)
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 0 (fallthrough)
+branch 27 taken 1
+call   28 never executed
+        -:  154:{
+        2:  155:	Piezas obj;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        1:  156:	Piece placed = Invalid;
+        1:  157:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  158:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  159:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  160:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  161:
+        1:  162:	ASSERT_NE(O, placed);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+call   16 never executed
+call   17 never executed
+call   18 returned 1
+branch 19 taken 1
+branch 20 taken 0
+call   21 returned 1
+branch 22 taken 1
+branch 23 taken 0
+call   24 never executed
+call   25 never executed
+call   26 never executed
+        -:  163:}
+        -:  164:
+function _ZN36PiezasTest_placed_out_of_Bounds_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN36PiezasTest_placed_out_of_Bounds_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN36PiezasTest_placed_out_of_Bounds_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN36PiezasTest_placed_out_of_Bounds_Test8TestBodyEv called 1 returned 100% blocks executed 46%
+        5:  165:TEST(PiezasTest, placed_out_of_Bounds)
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 0 (fallthrough)
+branch 27 taken 1
+call   28 never executed
+        -:  166:{
+        2:  167:	Piezas obj;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        1:  168:	Piece placed = Invalid;
+        1:  169:	placed = obj.dropPiece(-1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  170:	ASSERT_EQ(Invalid, placed);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+call   16 never executed
+call   17 never executed
+call   18 returned 1
+branch 19 taken 1
+branch 20 taken 0
+call   21 returned 1
+branch 22 taken 1
+branch 23 taken 0
+call   24 never executed
+call   25 never executed
+call   26 never executed
+        -:  171:}
+        -:  172:
+function _ZN37PiezasTest_placed_out_of_Bounds2_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN37PiezasTest_placed_out_of_Bounds2_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN37PiezasTest_placed_out_of_Bounds2_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN37PiezasTest_placed_out_of_Bounds2_Test8TestBodyEv called 1 returned 100% blocks executed 46%
+        5:  173:TEST(PiezasTest, placed_out_of_Bounds2)
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 0 (fallthrough)
+branch 27 taken 1
+call   28 never executed
+        -:  174:{
+        2:  175:	Piezas obj;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        1:  176:	Piece placed = Invalid;
+        1:  177:	placed = obj.dropPiece(5);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  178:	ASSERT_EQ(Invalid, placed);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+call   16 never executed
+call   17 never executed
+call   18 returned 1
+branch 19 taken 1
+branch 20 taken 0
+call   21 returned 1
+branch 22 taken 1
+branch 23 taken 0
+call   24 never executed
+call   25 never executed
+call   26 never executed
+        -:  179:}
+        -:  180:
+function _ZN27PiezasTest_placed_char_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN27PiezasTest_placed_char_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN27PiezasTest_placed_char_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN27PiezasTest_placed_char_Test8TestBodyEv called 1 returned 100% blocks executed 46%
+        5:  181:TEST(PiezasTest, placed_char)
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 0 (fallthrough)
+branch 27 taken 1
+call   28 never executed
+        -:  182:{
+        2:  183:	Piezas obj;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        1:  184:	Piece placed = Invalid;
+        1:  185:	placed = obj.dropPiece('a');
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  186:	ASSERT_EQ(Invalid, placed);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+call   16 never executed
+call   17 never executed
+call   18 returned 1
+branch 19 taken 1
+branch 20 taken 0
+call   21 returned 1
+branch 22 taken 1
+branch 23 taken 0
+call   24 never executed
+call   25 never executed
+call   26 never executed
+        -:  187:}
+        -:  188:
+function _ZN38PiezasTest_gamestate_not_finished_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN38PiezasTest_gamestate_not_finished_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN38PiezasTest_gamestate_not_finished_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN38PiezasTest_gamestate_not_finished_Test8TestBodyEv called 1 returned 100% blocks executed 51%
+        5:  189:TEST(PiezasTest, gamestate_not_finished)
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 0 (fallthrough)
+branch 27 taken 1
+call   28 never executed
+        -:  190:{
+        2:  191:	Piezas obj;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        1:  192:	Piece placed = X;
+        1:  193:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  194:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  195:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  196:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  197:	placed = obj.gameState();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  198:	ASSERT_EQ(Invalid, placed);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+call   16 never executed
+call   17 never executed
+call   18 returned 1
+branch 19 taken 1
+branch 20 taken 0
+call   21 returned 1
+branch 22 taken 1
+branch 23 taken 0
+call   24 never executed
+call   25 never executed
+call   26 never executed
+        -:  199:}
+        -:  200:
+        -:  201:
+function _ZN29PiezasTest_gamestate_tie_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN29PiezasTest_gamestate_tie_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN29PiezasTest_gamestate_tie_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN29PiezasTest_gamestate_tie_Test8TestBodyEv called 1 returned 100% blocks executed 60%
+        5:  202:TEST(PiezasTest, gamestate_tie)
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 0 (fallthrough)
+branch 27 taken 1
+call   28 never executed
+        -:  203:{
+        2:  204:	Piezas obj;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        1:  205:	Piece placed = X;
+        1:  206:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  207:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  208:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  209:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  210:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  211:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  212:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  213:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  214:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  215:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  216:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  217:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  218:
+        1:  219:	placed = obj.gameState();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  220:	ASSERT_EQ(Blank, placed);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+call   16 never executed
+call   17 never executed
+call   18 returned 1
+branch 19 taken 1
+branch 20 taken 0
+call   21 returned 1
+branch 22 taken 1
+branch 23 taken 0
+call   24 never executed
+call   25 never executed
+call   26 never executed
+        -:  221:}
+        -:  222:
+function _ZN30PiezasTest_gamestate_tie2_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN30PiezasTest_gamestate_tie2_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN30PiezasTest_gamestate_tie2_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN30PiezasTest_gamestate_tie2_Test8TestBodyEv called 1 returned 100% blocks executed 60%
+        5:  223:TEST(PiezasTest, gamestate_tie2)
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 0 (fallthrough)
+branch 27 taken 1
+call   28 never executed
+        -:  224:{
+        2:  225:	Piezas obj;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        1:  226:	Piece placed = X;
+        1:  227:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  228:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  229:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  230:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  231:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  232:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  233:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  234:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  235:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  236:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  237:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  238:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  239:
+        1:  240:	placed = obj.gameState();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  241:	ASSERT_EQ(Blank, placed);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+call   16 never executed
+call   17 never executed
+call   18 returned 1
+branch 19 taken 1
+branch 20 taken 0
+call   21 returned 1
+branch 22 taken 1
+branch 23 taken 0
+call   24 never executed
+call   25 never executed
+call   26 never executed
+        -:  242:} 
+        -:  243:
+function _ZN30PiezasTest_gamestate_tie3_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN30PiezasTest_gamestate_tie3_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN30PiezasTest_gamestate_tie3_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN30PiezasTest_gamestate_tie3_Test8TestBodyEv called 1 returned 100% blocks executed 60%
+        5:  244:TEST(PiezasTest, gamestate_tie3)
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 0 (fallthrough)
+branch 27 taken 1
+call   28 never executed
+        -:  245:{
+        2:  246:	Piezas obj;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        1:  247:	Piece placed = X;
+        1:  248:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  249:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  250:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  251:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  252:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  253:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  254:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  255:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  256:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  257:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  258:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  259:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  260:
+        1:  261:	placed = obj.gameState();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  262:	ASSERT_EQ(Blank, placed);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+call   16 never executed
+call   17 never executed
+call   18 returned 1
+branch 19 taken 1
+branch 20 taken 0
+call   21 returned 1
+branch 22 taken 1
+branch 23 taken 0
+call   24 never executed
+call   25 never executed
+call   26 never executed
+        -:  263:}
+        -:  264:
+function _ZN30PiezasTest_gamestate_tie4_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN30PiezasTest_gamestate_tie4_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN30PiezasTest_gamestate_tie4_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN30PiezasTest_gamestate_tie4_Test8TestBodyEv called 1 returned 100% blocks executed 60%
+        5:  265:TEST(PiezasTest, gamestate_tie4)
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 0 (fallthrough)
+branch 27 taken 1
+call   28 never executed
+        -:  266:{
+        2:  267:	Piezas obj;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        1:  268:	Piece placed = X;
+        1:  269:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  270:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  271:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  272:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  273:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  274:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  275:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  276:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  277:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  278:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  279:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  280:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  281:
+        1:  282:	placed = obj.gameState();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  283:	ASSERT_EQ(Blank, placed);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+call   16 never executed
+call   17 never executed
+call   18 returned 1
+branch 19 taken 1
+branch 20 taken 0
+call   21 returned 1
+branch 22 taken 1
+branch 23 taken 0
+call   24 never executed
+call   25 never executed
+call   26 never executed
+        -:  284:}
+        -:  285:
+function _ZN30PiezasTest_gamestate_tie5_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN30PiezasTest_gamestate_tie5_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN30PiezasTest_gamestate_tie5_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN30PiezasTest_gamestate_tie5_Test8TestBodyEv called 1 returned 100% blocks executed 60%
+        5:  286:TEST(PiezasTest, gamestate_tie5)
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 0 (fallthrough)
+branch 27 taken 1
+call   28 never executed
+        -:  287:{
+        2:  288:	Piezas obj;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        1:  289:	Piece placed = X;
+        1:  290:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  291:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  292:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  293:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  294:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  295:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  296:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  297:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  298:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  299:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  300:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  301:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  302:
+        1:  303:	placed = obj.gameState();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  304:	ASSERT_EQ(Blank, placed);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+call   16 never executed
+call   17 never executed
+call   18 returned 1
+branch 19 taken 1
+branch 20 taken 0
+call   21 returned 1
+branch 22 taken 1
+branch 23 taken 0
+call   24 never executed
+call   25 never executed
+call   26 never executed
+        -:  305:}
+        -:  306:
+function _ZN36PiezasTest_gamestate_tie4_reset_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN36PiezasTest_gamestate_tie4_reset_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN36PiezasTest_gamestate_tie4_reset_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN36PiezasTest_gamestate_tie4_reset_Test8TestBodyEv called 1 returned 100% blocks executed 68%
+        5:  307:TEST(PiezasTest, gamestate_tie4_reset)
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 0 (fallthrough)
+branch 27 taken 1
+call   28 never executed
+        -:  308:{
+        2:  309:	Piezas obj;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        1:  310:	Piece placed = X;
+        1:  311:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  312:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  313:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  314:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  315:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  316:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  317:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  318:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  319:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  320:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  321:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  322:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  323:	obj.reset();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  324:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  325:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  326:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  327:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  328:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  329:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  330:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  331:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  332:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  333:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  334:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  335:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  336:
+        1:  337:	placed = obj.gameState();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  338:	ASSERT_EQ(Blank, placed);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+call   16 never executed
+call   17 never executed
+call   18 returned 1
+branch 19 taken 1
+branch 20 taken 0
+call   21 returned 1
+branch 22 taken 1
+branch 23 taken 0
+call   24 never executed
+call   25 never executed
+call   26 never executed
+        -:  339:}
+        -:  340:
+function _ZN31PiezasTest_gamestate_X_win_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN31PiezasTest_gamestate_X_win_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN31PiezasTest_gamestate_X_win_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN31PiezasTest_gamestate_X_win_Test8TestBodyEv called 1 returned 100% blocks executed 68%
+        5:  341:TEST(PiezasTest, gamestate_X_win)
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 never executed
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 0 (fallthrough)
+branch 27 taken 1
+call   28 never executed
+        -:  342:{
+        1:  343:	Piezas obj;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        1:  344:	Piece placed = X;
+        1:  345:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  346:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  347:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  348:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  349:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  350:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  351:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  352:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  353:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  354:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  355:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  356:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  357:
+        1:  358:	placed = obj.gameState();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  359:	ASSERT_EQ(X, placed);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+branch 19 taken 0
+branch 20 taken 1
+call   21 returned 1
+branch 22 taken 0
+branch 23 taken 1
+call   24 never executed
+call   25 never executed
+call   26 never executed
+        -:  360:}
+        -:  361:
+        -:  362:
+function _ZN32PiezasTest_gamestate_X_win2_TestC2Ev called 1 returned 100% blocks executed 100%
+function _ZN32PiezasTest_gamestate_X_win2_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN32PiezasTest_gamestate_X_win2_TestD2Ev called 1 returned 100% blocks executed 75%
+function _ZN32PiezasTest_gamestate_X_win2_Test8TestBodyEv called 1 returned 100% blocks executed 68%
+        5:  363:TEST(PiezasTest, gamestate_X_win2)
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 never executed
+call   20 never executed
+call   21 never executed
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+branch 25 taken 0 (fallthrough)
+branch 26 taken 1
+call   27 never executed
+        -:  364:{
+        1:  365:	Piezas obj;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 never executed
+        1:  366:	Piece placed = X;
+        1:  367:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  368:	placed = obj.dropPiece(0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  369:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  370:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  371:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  372:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  373:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  374:	placed = obj.dropPiece(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  375:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  376:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  377:	placed = obj.dropPiece(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  378:	placed = obj.dropPiece(3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  379:
+        1:  380:	placed = obj.gameState();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  381:	ASSERT_EQ(X, placed);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+branch 19 taken 0
+branch 20 taken 1
+call   21 returned 1
+branch 22 taken 0
+branch 23 taken 1
+call   24 never executed
+call   25 never executed
+call   26 never executed
+function _GLOBAL__sub_I__ZN27PiezasTest_sanityCheck_Test10test_info_E called 1 returned 100% blocks executed 100%
+function _Z41__static_initialization_and_destruction_0ii called 1 returned 100% blocks executed 67%
+        3:  382:}
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0

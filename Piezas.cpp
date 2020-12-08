@@ -1,5 +1,6 @@
 #include "Piezas.h"
 #include <vector>
+#include <stdio.h>
 /** CLASS Piezas
  * Class for representing a Piezas vertical board, which is roughly based
  * on the game "Connect Four" where pieces are placed in a column and 
@@ -22,6 +23,10 @@
 **/
 Piezas::Piezas()
 {
+	board.resize(BOARD_ROWS, std::vector <Piece> (BOARD_COLS));
+	reset();
+
+
 }
 
 /**
@@ -30,6 +35,12 @@ Piezas::Piezas()
 **/
 void Piezas::reset()
 {
+	turn = X;
+	for(int i=0; i<BOARD_ROWS; i++)
+		for(int j=0; j<BOARD_COLS; j++)
+			board[i][j] = Blank;
+
+
 }
 
 /**
@@ -42,7 +53,37 @@ void Piezas::reset()
 **/ 
 Piece Piezas::dropPiece(int column)
 {
-    return Blank;
+	bool placed = false;
+	bool inBounds = false;
+	Piece placedPiece = Blank;
+	if( column <= BOARD_COLS && column > -1)
+	{
+		inBounds = true;
+		for( int i = 0; i < BOARD_ROWS; i++)
+		{
+			if(board[i][column] == Blank && placed == false)
+			{
+				board[i][column] = turn;
+				placed = true;
+				placedPiece = turn;
+				break;
+			}
+		
+		}
+	}
+
+	if (turn == X)
+	{
+		turn = O;
+	}else if(turn == O)
+	{
+		turn = X;
+	}
+
+	if(!inBounds)
+		placedPiece = Invalid;
+
+    return placedPiece;
 }
 
 /**
@@ -51,7 +92,12 @@ Piece Piezas::dropPiece(int column)
 **/
 Piece Piezas::pieceAt(int row, int column)
 {
-    return Blank;
+	if(BOARD_ROWS > row && row >=0 && BOARD_COLS > column && column >= 0)
+	{
+		return board[row][column];
+	}
+
+    return Invalid;
 }
 
 /**
@@ -65,5 +111,101 @@ Piece Piezas::pieceAt(int row, int column)
 **/
 Piece Piezas::gameState()
 {
-    return Blank;
+	int maxX = 0;
+	int maxO = 0;
+
+	int xCount = 1;
+	int oCount = 1;
+	for(int i = 0; i < BOARD_ROWS; i++)
+	{
+		for(int j =0; j < BOARD_COLS; j++)
+		{
+			if(board[i][j] == Blank || board[i][j] == Invalid)
+				return Invalid;
+		}
+	}
+	
+	for(int i = 0; i < BOARD_ROWS; i++)
+	{
+		xCount = 1;
+		oCount = 1;
+		for(int j =0; j< BOARD_COLS; j++)
+		{
+		        	
+			if( j-1 >=0 && board[i][j] == board[i][j-1])
+			{
+				if(board[i][j] == X)
+				{
+					xCount++;
+				}else
+				{
+					oCount++;
+				}
+			}
+			else if(j-1 >=0) 
+			{
+				if(board[i][j-1] == X)
+				{
+					if(xCount > maxX)
+						maxX = xCount;
+					xCount = 1;
+				}
+				else if(board[i][j-1] == O)
+				{
+					if(oCount > maxO)
+						maxO = oCount;
+
+					oCount = 1;
+				}
+			}
+			
+		}
+	}
+	
+
+	for(int i = 0; i < BOARD_COLS; i++)
+	{
+		xCount = 1;
+		oCount = 1;
+
+		for(int j =0; j < BOARD_ROWS; j++)
+		{
+			
+			if(j-1 >=0 && board[j][i] == board[j-1][i]) 
+			{
+				if(board[j][i] == X )
+				{
+					xCount++;
+				}else
+				{
+					oCount++;
+				}
+			}
+			else if(BOARD_ROWS > j && j-1 >=0) 
+			{
+				if(board[j-1][i] == X)
+				{
+					if(xCount > maxX)
+						maxX = xCount;
+					xCount = 1;
+				}
+				else if(board[j-1][i] == O)
+				{
+					if(oCount > maxO)
+						maxO = oCount;
+
+					oCount = 1;
+				}
+			}	
+		}
+	}
+	//printf("maxX %i \n", maxX);
+	//printf("maxO %i \n", maxO);	
+	if( maxX > maxO)
+    		return X;
+	else if(maxO > maxX)
+		return O;
+	else 
+		return Blank;
 }
+
