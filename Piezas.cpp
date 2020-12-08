@@ -22,7 +22,7 @@
  * specifies it is X's turn first
 **/
 Piezas::Piezas()
-{
+{//resizes the board vector based on the Board sizes, then calls reset to set it to blank
 	board.resize(BOARD_ROWS, std::vector <Piece> (BOARD_COLS));
 	reset();
 
@@ -34,7 +34,7 @@ Piezas::Piezas()
  * same size as previously specified
 **/
 void Piezas::reset()
-{
+{//traverse the board and sets it to blank 
 	turn = X;
 	for(int i=0; i<BOARD_ROWS; i++)
 		for(int j=0; j<BOARD_COLS; j++)
@@ -53,9 +53,9 @@ void Piezas::reset()
 **/ 
 Piece Piezas::dropPiece(int column)
 {
-	bool placed = false;
-	bool inBounds = false;
-	Piece placedPiece = Blank;
+	bool placed = false;//a toggle to show if a piece has been placed 
+	bool inBounds = false;//a toggle to toggle if the placement is inbounds
+	Piece placedPiece = Blank;//a temporary palceholder to return what piece was played
 	if( column <= BOARD_COLS && column > -1)
 	{
 		inBounds = true;
@@ -66,13 +66,12 @@ Piece Piezas::dropPiece(int column)
 				board[i][column] = turn;
 				placed = true;
 				placedPiece = turn;
-				break;
 			}
 		
 		}
 	}
 
-	if (turn == X)
+	if (turn == X)//this is to toggle whos turn it is
 	{
 		turn = O;
 	}else if(turn == O)
@@ -92,9 +91,9 @@ Piece Piezas::dropPiece(int column)
 **/
 Piece Piezas::pieceAt(int row, int column)
 {
-	if(BOARD_ROWS > row && row >=0 && BOARD_COLS > column && column >= 0)
+	if(BOARD_ROWS > row && row >=0 && BOARD_COLS > column && column >= 0)//checks whats is in bounds
 	{
-		return board[row][column];
+		return board[row][column];//no need for a blank check, if the placement is blank it will return blank
 	}
 
     return Invalid;
@@ -116,7 +115,7 @@ Piece Piezas::gameState()
 
 	int xCount = 1;
 	int oCount = 1;
-	for(int i = 0; i < BOARD_ROWS; i++)
+	for(int i = 0; i < BOARD_ROWS; i++)//this checks to see if the board is completely filled
 	{
 		for(int j =0; j < BOARD_COLS; j++)
 		{
@@ -125,8 +124,16 @@ Piece Piezas::gameState()
 		}
 	}
 	
-	for(int i = 0; i < BOARD_ROWS; i++)
+	for(int i = 0; i < BOARD_ROWS; i++)//I am having a hard time on this logic 
 	{
+		
+		/*this is supposed to check the cols and adds xCout or oCount based on the placement
+		 *there is another nested for loop that checks the rows and adds them up
+		 *this is getting tricky I been working on this for a few hours now
+		 *
+		 *
+		 * 
+		 * */
 		xCount = 1;
 		oCount = 1;
 		for(int j =0; j< BOARD_COLS; j++)
@@ -163,7 +170,7 @@ Piece Piezas::gameState()
 	}
 	
 
-	for(int i = 0; i < BOARD_COLS; i++)
+	for(int i = 0; i < BOARD_COLS; i++)//nested for loop to check rows
 	{
 		xCount = 1;
 		oCount = 1;

@@ -27,7 +27,7 @@ function _ZN6PiezasC2Ev called 24 returned 100% blocks executed 64%
        24:   24:Piezas::Piezas()
 call    0 returned 24
 call    1 never executed
-        -:   25:{
+        -:   25:{//resizes the board vector based on the Board sizes, then calls reset to set it to blank
        24:   26:	board.resize(BOARD_ROWS, std::vector <Piece> (BOARD_COLS));
 call    0 returned 24
 call    1 returned 24
@@ -52,7 +52,7 @@ call    0 returned 24
         -:   35:**/
 function _ZN6Piezas5resetEv called 26 returned 100% blocks executed 100%
        26:   36:void Piezas::reset()
-        -:   37:{
+        -:   37:{//traverse the board and sets it to blank 
        26:   38:	turn = X;
       104:   39:	for(int i=0; i<BOARD_ROWS; i++)
 branch  0 taken 78 (fallthrough)
@@ -78,9 +78,9 @@ call    1 returned 312
 function _ZN6Piezas9dropPieceEi called 157 returned 100% blocks executed 100%
       157:   54:Piece Piezas::dropPiece(int column)
         -:   55:{
-      157:   56:	bool placed = false;
-      157:   57:	bool inBounds = false;
-      157:   58:	Piece placedPiece = Blank;
+      157:   56:	bool placed = false;//a toggle to show if a piece has been placed 
+      157:   57:	bool inBounds = false;//a toggle to toggle if the placement is inbounds
+      157:   58:	Piece placedPiece = Blank;//a temporary palceholder to return what piece was played
       157:   59:	if( column <= BOARD_COLS && column > -1)
 branch  0 taken 155 (fallthrough)
 branch  1 taken 2
@@ -88,59 +88,58 @@ branch  2 taken 154 (fallthrough)
 branch  3 taken 1
         -:   60:	{
       154:   61:		inBounds = true;
-      327:   62:		for( int i = 0; i < BOARD_ROWS; i++)
-branch  0 taken 316 (fallthrough)
-branch  1 taken 11
+      616:   62:		for( int i = 0; i < BOARD_ROWS; i++)
+branch  0 taken 462 (fallthrough)
+branch  1 taken 154
         -:   63:		{
-      316:   64:			if(board[i][column] == Blank && placed == false)
-call    0 returned 316
-call    1 returned 316
-branch  2 taken 143 (fallthrough)
+      462:   64:			if(board[i][column] == Blank && placed == false)
+call    0 returned 462
+call    1 returned 462
+branch  2 taken 289 (fallthrough)
 branch  3 taken 173
 branch  4 taken 143 (fallthrough)
-branch  5 taken 0
+branch  5 taken 146
 branch  6 taken 143 (fallthrough)
-branch  7 taken 173
+branch  7 taken 319
         -:   65:			{
       143:   66:				board[i][column] = turn;
 call    0 returned 143
 call    1 returned 143
       143:   67:				placed = true;
       143:   68:				placedPiece = turn;
-      143:   69:				break;
-        -:   70:			}
-        -:   71:		
-        -:   72:		}
-        -:   73:	}
-        -:   74:
-      157:   75:	if (turn == X)
+        -:   69:			}
+        -:   70:		
+        -:   71:		}
+        -:   72:	}
+        -:   73:
+      157:   74:	if (turn == X)//this is to toggle whos turn it is
 branch  0 taken 81 (fallthrough)
 branch  1 taken 76
-        -:   76:	{
-       81:   77:		turn = O;
-       76:   78:	}else if(turn == O)
+        -:   75:	{
+       81:   76:		turn = O;
+       76:   77:	}else if(turn == O)
 branch  0 taken 76 (fallthrough)
 branch  1 taken 0
-        -:   79:	{
-       76:   80:		turn = X;
-        -:   81:	}
-        -:   82:
-      157:   83:	if(!inBounds)
+        -:   78:	{
+       76:   79:		turn = X;
+        -:   80:	}
+        -:   81:
+      157:   82:	if(!inBounds)
 branch  0 taken 3 (fallthrough)
 branch  1 taken 154
-        3:   84:		placedPiece = Invalid;
-        -:   85:
-      157:   86:    return placedPiece;
-        -:   87:}
-        -:   88:
-        -:   89:/**
-        -:   90: * Returns what piece is at the provided coordinates, or Blank if there
-        -:   91: * are no pieces there, or Invalid if the coordinates are out of bounds
-        -:   92:**/
+        3:   83:		placedPiece = Invalid;
+        -:   84:
+      157:   85:    return placedPiece;
+        -:   86:}
+        -:   87:
+        -:   88:/**
+        -:   89: * Returns what piece is at the provided coordinates, or Blank if there
+        -:   90: * are no pieces there, or Invalid if the coordinates are out of bounds
+        -:   91:**/
 function _ZN6Piezas7pieceAtEii called 7 returned 100% blocks executed 100%
-        7:   93:Piece Piezas::pieceAt(int row, int column)
-        -:   94:{
-        7:   95:	if(BOARD_ROWS > row && row >=0 && BOARD_COLS > column && column >= 0)
+        7:   92:Piece Piezas::pieceAt(int row, int column)
+        -:   93:{
+        7:   94:	if(BOARD_ROWS > row && row >=0 && BOARD_COLS > column && column >= 0)//checks whats is in bounds
 branch  0 taken 5 (fallthrough)
 branch  1 taken 2
 branch  2 taken 5 (fallthrough)
@@ -149,41 +148,41 @@ branch  4 taken 5 (fallthrough)
 branch  5 taken 0
 branch  6 taken 5 (fallthrough)
 branch  7 taken 0
-        -:   96:	{
-        5:   97:		return board[row][column];
+        -:   95:	{
+        5:   96:		return board[row][column];//no need for a blank check, if the placement is blank it will return blank
 call    0 returned 5
 call    1 returned 5
-        -:   98:	}
-        -:   99:
-        2:  100:    return Invalid;
-        -:  101:}
-        -:  102:
-        -:  103:/**
-        -:  104: * Returns which Piece has won, if there is a winner, Invalid if the game
-        -:  105: * is not over, or Blank if the board is filled and no one has won ("tie").
-        -:  106: * For a game to be over, all locations on the board must be filled with X's 
-        -:  107: * and O's (i.e. no remaining Blank spaces). The winner is which player has
-        -:  108: * the most adjacent pieces in a single line. Lines can go either vertically
-        -:  109: * or horizontally. If both X's and O's have the same max number of pieces in a
-        -:  110: * line, it is a tie.
-        -:  111:**/
+        -:   97:	}
+        -:   98:
+        2:   99:    return Invalid;
+        -:  100:}
+        -:  101:
+        -:  102:/**
+        -:  103: * Returns which Piece has won, if there is a winner, Invalid if the game
+        -:  104: * is not over, or Blank if the board is filled and no one has won ("tie").
+        -:  105: * For a game to be over, all locations on the board must be filled with X's 
+        -:  106: * and O's (i.e. no remaining Blank spaces). The winner is which player has
+        -:  107: * the most adjacent pieces in a single line. Lines can go either vertically
+        -:  108: * or horizontally. If both X's and O's have the same max number of pieces in a
+        -:  109: * line, it is a tie.
+        -:  110:**/
 function _ZN6Piezas9gameStateEv called 9 returned 100% blocks executed 97%
-        9:  112:Piece Piezas::gameState()
-        -:  113:{
-        9:  114:	int maxX = 0;
-        9:  115:	int maxO = 0;
-        -:  116:
-        9:  117:	int xCount = 1;
-        9:  118:	int oCount = 1;
-       32:  119:	for(int i = 0; i < BOARD_ROWS; i++)
+        9:  111:Piece Piezas::gameState()
+        -:  112:{
+        9:  113:	int maxX = 0;
+        9:  114:	int maxO = 0;
+        -:  115:
+        9:  116:	int xCount = 1;
+        9:  117:	int oCount = 1;
+       32:  118:	for(int i = 0; i < BOARD_ROWS; i++)//this checks to see if the board is completely filled
 branch  0 taken 25 (fallthrough)
 branch  1 taken 7
-        -:  120:	{
-      118:  121:		for(int j =0; j < BOARD_COLS; j++)
+        -:  119:	{
+      118:  120:		for(int j =0; j < BOARD_COLS; j++)
 branch  0 taken 95 (fallthrough)
 branch  1 taken 23
-        -:  122:		{
-       95:  123:			if(board[i][j] == Blank || board[i][j] == Invalid)
+        -:  121:		{
+       95:  122:			if(board[i][j] == Blank || board[i][j] == Invalid)
 call    0 returned 95
 call    1 returned 95
 branch  2 taken 93 (fallthrough)
@@ -194,22 +193,30 @@ branch  6 taken 0 (fallthrough)
 branch  7 taken 93
 branch  8 taken 2 (fallthrough)
 branch  9 taken 93
-        2:  124:				return Invalid;
-        -:  125:		}
-        -:  126:	}
-        -:  127:	
-       28:  128:	for(int i = 0; i < BOARD_ROWS; i++)
+        2:  123:				return Invalid;
+        -:  124:		}
+        -:  125:	}
+        -:  126:	
+       28:  127:	for(int i = 0; i < BOARD_ROWS; i++)//I am having a hard time on this logic 
 branch  0 taken 21 (fallthrough)
 branch  1 taken 7
-        -:  129:	{
-       21:  130:		xCount = 1;
-       21:  131:		oCount = 1;
-      105:  132:		for(int j =0; j< BOARD_COLS; j++)
+        -:  128:	{
+        -:  129:		
+        -:  130:		/*this is supposed to check the cols and adds xCout or oCount based on the placement
+        -:  131:		 *there is another nested for loop that checks the rows and adds them up
+        -:  132:		 *this is getting tricky I been working on this for a few hours now
+        -:  133:		 *
+        -:  134:		 *
+        -:  135:		 * 
+        -:  136:		 * */
+       21:  137:		xCount = 1;
+       21:  138:		oCount = 1;
+      105:  139:		for(int j =0; j< BOARD_COLS; j++)
 branch  0 taken 84 (fallthrough)
 branch  1 taken 21
-        -:  133:		{
-        -:  134:		        	
-       84:  135:			if( j-1 >=0 && board[i][j] == board[i][j-1])
+        -:  140:		{
+        -:  141:		        	
+       84:  142:			if( j-1 >=0 && board[i][j] == board[i][j-1])
 branch  0 taken 63 (fallthrough)
 branch  1 taken 21
 call    2 returned 63
@@ -220,67 +227,67 @@ branch  6 taken 22 (fallthrough)
 branch  7 taken 41
 branch  8 taken 22 (fallthrough)
 branch  9 taken 62
-        -:  136:			{
-       22:  137:				if(board[i][j] == X)
+        -:  143:			{
+       22:  144:				if(board[i][j] == X)
 call    0 returned 22
 call    1 returned 22
 branch  2 taken 9 (fallthrough)
 branch  3 taken 13
-        -:  138:				{
-        9:  139:					xCount++;
-        -:  140:				}else
-        -:  141:				{
-       13:  142:					oCount++;
-        -:  143:				}
-        -:  144:			}
-       62:  145:			else if(j-1 >=0) 
+        -:  145:				{
+        9:  146:					xCount++;
+        -:  147:				}else
+        -:  148:				{
+       13:  149:					oCount++;
+        -:  150:				}
+        -:  151:			}
+       62:  152:			else if(j-1 >=0) 
 branch  0 taken 41 (fallthrough)
 branch  1 taken 21
-        -:  146:			{
-       41:  147:				if(board[i][j-1] == X)
+        -:  153:			{
+       41:  154:				if(board[i][j-1] == X)
 call    0 returned 41
 call    1 returned 41
 branch  2 taken 25 (fallthrough)
 branch  3 taken 16
-        -:  148:				{
-       25:  149:					if(xCount > maxX)
+        -:  155:				{
+       25:  156:					if(xCount > maxX)
 branch  0 taken 9 (fallthrough)
 branch  1 taken 16
-        9:  150:						maxX = xCount;
-       25:  151:					xCount = 1;
-        -:  152:				}
-       16:  153:				else if(board[i][j-1] == O)
+        9:  157:						maxX = xCount;
+       25:  158:					xCount = 1;
+        -:  159:				}
+       16:  160:				else if(board[i][j-1] == O)
 call    0 returned 16
 call    1 returned 16
 branch  2 taken 16 (fallthrough)
 branch  3 taken 0
-        -:  154:				{
-       16:  155:					if(oCount > maxO)
+        -:  161:				{
+       16:  162:					if(oCount > maxO)
 branch  0 taken 8 (fallthrough)
 branch  1 taken 8
-        8:  156:						maxO = oCount;
-        -:  157:
-       16:  158:					oCount = 1;
-        -:  159:				}
-        -:  160:			}
-        -:  161:			
-        -:  162:		}
-        -:  163:	}
-        -:  164:	
-        -:  165:
-       35:  166:	for(int i = 0; i < BOARD_COLS; i++)
+        8:  163:						maxO = oCount;
+        -:  164:
+       16:  165:					oCount = 1;
+        -:  166:				}
+        -:  167:			}
+        -:  168:			
+        -:  169:		}
+        -:  170:	}
+        -:  171:	
+        -:  172:
+       35:  173:	for(int i = 0; i < BOARD_COLS; i++)//nested for loop to check rows
 branch  0 taken 28 (fallthrough)
 branch  1 taken 7
-        -:  167:	{
-       28:  168:		xCount = 1;
-       28:  169:		oCount = 1;
-        -:  170:
-      112:  171:		for(int j =0; j < BOARD_ROWS; j++)
+        -:  174:	{
+       28:  175:		xCount = 1;
+       28:  176:		oCount = 1;
+        -:  177:
+      112:  178:		for(int j =0; j < BOARD_ROWS; j++)
 branch  0 taken 84 (fallthrough)
 branch  1 taken 28
-        -:  172:		{
-        -:  173:			
-       84:  174:			if(j-1 >=0 && board[j][i] == board[j-1][i]) 
+        -:  179:		{
+        -:  180:			
+       84:  181:			if(j-1 >=0 && board[j][i] == board[j-1][i]) 
 branch  0 taken 56 (fallthrough)
 branch  1 taken 28
 call    2 returned 56
@@ -291,66 +298,64 @@ branch  6 taken 21 (fallthrough)
 branch  7 taken 35
 branch  8 taken 21 (fallthrough)
 branch  9 taken 63
-        -:  175:			{
-       21:  176:				if(board[j][i] == X )
+        -:  182:			{
+       21:  183:				if(board[j][i] == X )
 call    0 returned 21
 call    1 returned 21
 branch  2 taken 10 (fallthrough)
 branch  3 taken 11
-        -:  177:				{
-       10:  178:					xCount++;
-        -:  179:				}else
-        -:  180:				{
-       11:  181:					oCount++;
-        -:  182:				}
-        -:  183:			}
-       63:  184:			else if(BOARD_ROWS > j && j-1 >=0) 
+        -:  184:				{
+       10:  185:					xCount++;
+        -:  186:				}else
+        -:  187:				{
+       11:  188:					oCount++;
+        -:  189:				}
+        -:  190:			}
+       63:  191:			else if(BOARD_ROWS > j && j-1 >=0) 
 branch  0 taken 63 (fallthrough)
 branch  1 taken 0
 branch  2 taken 35 (fallthrough)
 branch  3 taken 28
-        -:  185:			{
-       35:  186:				if(board[j-1][i] == X)
+        -:  192:			{
+       35:  193:				if(board[j-1][i] == X)
 call    0 returned 35
 call    1 returned 35
 branch  2 taken 18 (fallthrough)
 branch  3 taken 17
-        -:  187:				{
-       18:  188:					if(xCount > maxX)
+        -:  194:				{
+       18:  195:					if(xCount > maxX)
 branch  0 taken 0 (fallthrough)
 branch  1 taken 18
-    #####:  189:						maxX = xCount;
-       18:  190:					xCount = 1;
-        -:  191:				}
-       17:  192:				else if(board[j-1][i] == O)
+    #####:  196:						maxX = xCount;
+       18:  197:					xCount = 1;
+        -:  198:				}
+       17:  199:				else if(board[j-1][i] == O)
 call    0 returned 17
 call    1 returned 17
 branch  2 taken 17 (fallthrough)
 branch  3 taken 0
-        -:  193:				{
-       17:  194:					if(oCount > maxO)
+        -:  200:				{
+       17:  201:					if(oCount > maxO)
 branch  0 taken 1 (fallthrough)
 branch  1 taken 16
-        1:  195:						maxO = oCount;
-        -:  196:
-       17:  197:					oCount = 1;
-        -:  198:				}
-        -:  199:			}	
-        -:  200:		}
-        -:  201:	}
-        7:  202:	printf("maxX %i \n", maxX);
-call    0 returned 7
-        7:  203:	printf("maxO %i \n", maxO);	
-call    0 returned 7
-        7:  204:	if( maxX > maxO)
+        1:  202:						maxO = oCount;
+        -:  203:
+       17:  204:					oCount = 1;
+        -:  205:				}
+        -:  206:			}	
+        -:  207:		}
+        -:  208:	}
+        -:  209:	//printf("maxX %i \n", maxX);
+        -:  210:	//printf("maxO %i \n", maxO);	
+        7:  211:	if( maxX > maxO)
 branch  0 taken 0 (fallthrough)
 branch  1 taken 7
-    #####:  205:    		return X;
-        7:  206:	else if(maxO > maxX)
+    #####:  212:    		return X;
+        7:  213:	else if(maxO > maxX)
 branch  0 taken 0 (fallthrough)
 branch  1 taken 7
-    #####:  207:		return O;
-        -:  208:	else 
-        7:  209:		return Blank;
-        -:  210:}
-        -:  211:
+    #####:  214:		return O;
+        -:  215:	else 
+        7:  216:		return Blank;
+        -:  217:}
+        -:  218:
