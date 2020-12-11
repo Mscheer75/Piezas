@@ -23,60 +23,60 @@
         -:   21: * Constructor sets an empty board (default 3 rows, 4 columns) and 
         -:   22: * specifies it is X's turn first
         -:   23:**/
-function _ZN6PiezasC2Ev called 28 returned 100% blocks executed 76%
-       28:   24:Piezas::Piezas()
-call    0 returned 28
+function _ZN6PiezasC2Ev called 30 returned 100% blocks executed 76%
+       30:   24:Piezas::Piezas()
+call    0 returned 30
 call    1 never executed
         -:   25:{//resizes the board vector based on the Board sizes, then calls reset to set it to blank
-       28:   26:	board.resize(BOARD_ROWS, std::vector <Piece> (BOARD_COLS));
-call    0 returned 28
-call    1 returned 28
-branch  2 taken 28 (fallthrough)
+       30:   26:	board.resize(BOARD_ROWS, std::vector <Piece> (BOARD_COLS));
+call    0 returned 30
+call    1 returned 30
+branch  2 taken 30 (fallthrough)
 branch  3 taken 0 (throw)
-call    4 returned 28
-branch  5 taken 28 (fallthrough)
+call    4 returned 30
+branch  5 taken 30 (fallthrough)
 branch  6 taken 0 (throw)
-call    7 returned 28
-call    8 returned 28
+call    7 returned 30
+call    8 returned 30
 call    9 never executed
 call   10 never executed
         -:   27:	//reset(); <-- I thought I was being clevar by calling this but since you dont initialize it to turn x, this changes everything
-       28:   28:	turn = X;	
-      112:   29:	for(int i=0; i<BOARD_ROWS; i++)
-branch  0 taken 84 (fallthrough)
-branch  1 taken 28
-      420:   30:		for(int j=0; j<BOARD_COLS; j++)
-branch  0 taken 336 (fallthrough)
-branch  1 taken 84
-      336:   31:			board[i][j] = Blank;
-call    0 returned 336
-call    1 returned 336
+       30:   28:	turn = X;	
+      120:   29:	for(int i=0; i<BOARD_ROWS; i++)
+branch  0 taken 90 (fallthrough)
+branch  1 taken 30
+      450:   30:		for(int j=0; j<BOARD_COLS; j++)
+branch  0 taken 360 (fallthrough)
+branch  1 taken 90
+      360:   31:			board[i][j] = Blank;
+call    0 returned 360
+call    1 returned 360
         -:   32:
         -:   33:
         -:   34:
         -:   35:
-       28:   36:}
+       30:   36:}
         -:   37:
         -:   38:/**
         -:   39: * Resets each board location to the Blank Piece value, with a board of the
         -:   40: * same size as previously specified
         -:   41:**/
-function _ZN6Piezas5resetEv called 2 returned 100% blocks executed 100%
-        2:   42:void Piezas::reset()
+function _ZN6Piezas5resetEv called 4 returned 100% blocks executed 100%
+        4:   42:void Piezas::reset()
         -:   43:{//traverse the board and sets it to blank 
         -:   44:	//turn = X;   <-- this should exist I think. Also students will mess this up, I wouldnt be surpised if this is a trap
-        8:   45:	for(int i=0; i<BOARD_ROWS; i++)
-branch  0 taken 6 (fallthrough)
-branch  1 taken 2
-       30:   46:		for(int j=0; j<BOARD_COLS; j++)
-branch  0 taken 24 (fallthrough)
-branch  1 taken 6
-       24:   47:			board[i][j] = Blank;
-call    0 returned 24
-call    1 returned 24
+       16:   45:	for(int i=0; i<BOARD_ROWS; i++)
+branch  0 taken 12 (fallthrough)
+branch  1 taken 4
+       60:   46:		for(int j=0; j<BOARD_COLS; j++)
+branch  0 taken 48 (fallthrough)
+branch  1 taken 12
+       48:   47:			board[i][j] = Blank;
+call    0 returned 48
+call    1 returned 48
         -:   48:
         -:   49:
-        2:   50:}
+        4:   50:}
         -:   51:
         -:   52:/**
         -:   53: * Places a piece of the current turn on the board, returns what
@@ -86,61 +86,61 @@ call    1 returned 24
         -:   57: * Out of bounds coordinates return the Piece Invalid value
         -:   58: * Trying to drop a piece where it cannot be placed loses the player's turn
         -:   59:**/ 
-function _ZN6Piezas9dropPieceEi called 253 returned 100% blocks executed 100%
-      253:   60:Piece Piezas::dropPiece(int column)
+function _ZN6Piezas9dropPieceEi called 280 returned 100% blocks executed 100%
+      280:   60:Piece Piezas::dropPiece(int column)
         -:   61:{
-      253:   62:	bool placed = false;//a toggle to show if a piece has been placed 
-      253:   63:	bool inBounds = false;//a toggle to toggle if the placement is inbounds
-      253:   64:	Piece placedPiece = Blank;//a temporary palceholder to return what piece was played
-      253:   65:	if( column <= BOARD_COLS && column > -1)
-branch  0 taken 203 (fallthrough)
-branch  1 taken 50
-branch  2 taken 202 (fallthrough)
+      280:   62:	bool placed = false;//a toggle to show if a piece has been placed 
+      280:   63:	bool inBounds = false;//a toggle to toggle if the placement is inbounds
+      280:   64:	Piece placedPiece = Blank;//a temporary palceholder to return what piece was played
+      280:   65:	if( column <= BOARD_COLS && column > -1)
+branch  0 taken 229 (fallthrough)
+branch  1 taken 51
+branch  2 taken 228 (fallthrough)
 branch  3 taken 1
         -:   66:	{
-      202:   67:		inBounds = true;
-      808:   68:		for( int i = 0; i < BOARD_ROWS; i++)
-branch  0 taken 606 (fallthrough)
-branch  1 taken 202
+      228:   67:		inBounds = true;
+      912:   68:		for( int i = 0; i < BOARD_ROWS; i++)
+branch  0 taken 684 (fallthrough)
+branch  1 taken 228
         -:   69:		{
-      606:   70:			if(board[i][column] == Blank && placed == false)
-call    0 returned 606
-call    1 returned 606
-branch  2 taken 386 (fallthrough)
-branch  3 taken 220
-branch  4 taken 192 (fallthrough)
-branch  5 taken 194
-branch  6 taken 192 (fallthrough)
-branch  7 taken 414
+      684:   70:			if(board[i][column] == Blank && placed == false)
+call    0 returned 684
+call    1 returned 684
+branch  2 taken 440 (fallthrough)
+branch  3 taken 244
+branch  4 taken 218 (fallthrough)
+branch  5 taken 222
+branch  6 taken 218 (fallthrough)
+branch  7 taken 466
         -:   71:			{
-      192:   72:				board[i][column] = turn;
-call    0 returned 192
-call    1 returned 192
-      192:   73:				placed = true;
-      192:   74:				placedPiece = turn;
+      218:   72:				board[i][column] = turn;
+call    0 returned 218
+call    1 returned 218
+      218:   73:				placed = true;
+      218:   74:				placedPiece = turn;
         -:   75:			}
         -:   76:		
         -:   77:		}
         -:   78:	}
         -:   79:
-      253:   80:	if (turn == X)//this is to toggle whos turn it is
-branch  0 taken 129 (fallthrough)
-branch  1 taken 124
+      280:   80:	if (turn == X)//this is to toggle whos turn it is
+branch  0 taken 143 (fallthrough)
+branch  1 taken 137
         -:   81:	{
-      129:   82:		turn = O;
-      124:   83:	}else if(turn == O)
-branch  0 taken 124 (fallthrough)
+      143:   82:		turn = O;
+      137:   83:	}else if(turn == O)
+branch  0 taken 137 (fallthrough)
 branch  1 taken 0
         -:   84:	{
-      124:   85:		turn = X;
+      137:   85:		turn = X;
         -:   86:	}
         -:   87:
-      253:   88:	if(!inBounds)
-branch  0 taken 51 (fallthrough)
-branch  1 taken 202
-       51:   89:		placedPiece = Invalid;
+      280:   88:	if(!inBounds)
+branch  0 taken 52 (fallthrough)
+branch  1 taken 228
+       52:   89:		placedPiece = Invalid;
         -:   90:
-      253:   91:    return placedPiece;
+      280:   91:    return placedPiece;
         -:   92:}
         -:   93:
         -:   94:/**

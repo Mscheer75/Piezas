@@ -547,8 +547,50 @@ TEST(PiezasTest, pieaceAt_afterblowout_all)//this test was made after pure frust
 
 	placed = obj.pieceAt(2,3);
 	ASSERT_EQ(X, placed);
+}
 
+TEST(PiezasTest, placeCheck_for_X_After1Game)
+{
+	Piezas obj;
+	Piece placed = O;
+	placed = obj.dropPiece(0);
+	placed = obj.dropPiece(0);
+	placed = obj.dropPiece(1);
+	placed = obj.dropPiece(1);
+	placed = obj.dropPiece(2);
+	placed = obj.dropPiece(1);
+	placed = obj.dropPiece(3);
+	placed = obj.dropPiece(0);
+	placed = obj.dropPiece(2);
+	placed = obj.dropPiece(3);
+	placed = obj.dropPiece(2);
+	placed = obj.dropPiece(3);
+	
+	obj.reset();
 
+	placed = obj.dropPiece(0);
+	ASSERT_EQ(X, placed);
+}
+TEST(PiezasTest, placeCheck_for_O_After1Game)
+{
+	Piezas obj;
+	Piece placed = O;
+	placed = obj.dropPiece(0);
+	placed = obj.dropPiece(0);
+	placed = obj.dropPiece(1);
+	placed = obj.dropPiece(1);
+	placed = obj.dropPiece(2);
+	placed = obj.dropPiece(1);
+	placed = obj.dropPiece(3);
+	placed = obj.dropPiece(0);
+	placed = obj.dropPiece(2);
+	placed = obj.dropPiece(3);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(3);
+	placed = obj.dropPiece(2);
+	
+	obj.reset();
 
-
+	placed = obj.dropPiece(0);
+	ASSERT_EQ(O, placed);
 }

@@ -29,9 +29,9 @@
         -:   27: * So that a piece dropped in column 2 should take [0,2] and the next one
         -:   28: * dropped in column 2 should take [1,2].
         -:   29:**/
-function _ZN6PiezasD2Ev called 28 returned 100% blocks executed 100%
-       28:   30:class Piezas
-call    0 returned 28
+function _ZN6PiezasD2Ev called 30 returned 100% blocks executed 100%
+       30:   30:class Piezas
+call    0 returned 30
         -:   31:{
         -:   32:  private:
         -:   33:  	std::vector < std::vector<Piece> > board;
