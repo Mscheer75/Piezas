@@ -371,7 +371,7 @@ TEST(PiezasTest, gamestate_X_win2)
 	placed = obj.dropPiece(2);
 	placed = obj.dropPiece(1);
 	placed = obj.dropPiece(3);
-	placed = obj.dropPiece(1);
+	placed = obj.dropPiece(0);
 	placed = obj.dropPiece(2);
 	placed = obj.dropPiece(3);
 	placed = obj.dropPiece(2);
@@ -379,4 +379,176 @@ TEST(PiezasTest, gamestate_X_win2)
 
 	placed = obj.gameState();
 	ASSERT_EQ(X, placed);
+}
+
+TEST(PiezasTest, gamestate_X_win_Blowout)
+{
+	Piezas obj;
+	Piece placed = X;
+	placed = obj.dropPiece(0);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(0);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(0);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(1);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(1);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(1);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(2);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(2);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(2);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(3);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(3);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(3);
+	placed = obj.dropPiece(6);
+
+
+	placed = obj.gameState();
+	ASSERT_EQ(X, placed);
+}
+
+TEST(PiezasTest, pieaceAt_afterblowout)
+{
+	Piezas obj;
+	Piece placed = X;
+	placed = obj.dropPiece(0);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(0);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(0);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(1);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(1);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(1);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(2);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(2);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(2);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(3);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(3);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(3);
+	placed = obj.dropPiece(6);
+
+
+	placed = obj.pieceAt(0,1);
+	ASSERT_EQ(X, placed);
+}
+
+TEST(PiezasTest, pieaceAt_afterblowout2)
+{
+	Piezas obj;
+	Piece placed = X;
+	placed = obj.dropPiece(0);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(0);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(0);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(1);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(1);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(1);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(2);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(2);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(2);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(3);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(3);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(3);
+	placed = obj.dropPiece(6);
+
+
+	placed = obj.pieceAt(1,0);
+	ASSERT_EQ(X, placed);
+}
+
+TEST(PiezasTest, pieaceAt_afterblowout_all)//this test was made after pure frustration
+{
+	Piezas obj;
+	Piece placed = X;
+	placed = obj.dropPiece(0);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(0);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(0);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(1);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(1);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(1);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(2);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(2);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(2);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(3);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(3);
+	placed = obj.dropPiece(6);
+	placed = obj.dropPiece(3);
+	placed = obj.dropPiece(6);
+
+	placed = obj.pieceAt(0,0);
+	ASSERT_EQ(X, placed);
+
+	placed = obj.pieceAt(0,1);
+	ASSERT_EQ(X, placed);
+
+	placed = obj.pieceAt(0,2);
+	ASSERT_EQ(X, placed);
+
+	placed = obj.pieceAt(0,3);
+	ASSERT_EQ(X, placed);
+
+	placed = obj.pieceAt(1,0);
+	ASSERT_EQ(X, placed);
+
+	placed = obj.pieceAt(1,1);
+	ASSERT_EQ(X, placed);
+
+	placed = obj.pieceAt(1,2);
+	ASSERT_EQ(X, placed);
+
+	placed = obj.pieceAt(1,3);
+	ASSERT_EQ(X, placed);
+
+	placed = obj.pieceAt(2,0);
+	ASSERT_EQ(X, placed);
+
+	placed = obj.pieceAt(2,1);
+	ASSERT_EQ(X, placed);
+
+	placed = obj.pieceAt(2,2);
+	ASSERT_EQ(X, placed);
+
+	placed = obj.pieceAt(2,3);
+	ASSERT_EQ(X, placed);
+
+
+
+
 }

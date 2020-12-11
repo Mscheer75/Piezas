@@ -24,7 +24,13 @@
 Piezas::Piezas()
 {//resizes the board vector based on the Board sizes, then calls reset to set it to blank
 	board.resize(BOARD_ROWS, std::vector <Piece> (BOARD_COLS));
-	reset();
+	//reset(); <-- I thought I was being clevar by calling this but since you dont initialize it to turn x, this changes everything
+	turn = X;	
+	for(int i=0; i<BOARD_ROWS; i++)
+		for(int j=0; j<BOARD_COLS; j++)
+			board[i][j] = Blank;
+
+
 
 
 }
@@ -35,7 +41,7 @@ Piezas::Piezas()
 **/
 void Piezas::reset()
 {//traverse the board and sets it to blank 
-	turn = X;
+	//turn = X;   <-- this should exist I think. Also students will mess this up, I wouldnt be surpised if this is a trap
 	for(int i=0; i<BOARD_ROWS; i++)
 		for(int j=0; j<BOARD_COLS; j++)
 			board[i][j] = Blank;
@@ -132,7 +138,7 @@ Piece Piezas::gameState()
 		 *this is getting tricky I been working on this for a few hours now
 		 *
 		 *
-		 * 
+		 *I GOT IT!!!!!! 
 		 * */
 		xCount = 1;
 		oCount = 1;
@@ -144,9 +150,15 @@ Piece Piezas::gameState()
 				if(board[i][j] == X)
 				{
 					xCount++;
+					if(xCount > maxX)
+						maxX = xCount;
 				}else
 				{
 					oCount++;
+					if(oCount > maxO)
+						maxO = oCount;
+
+
 				}
 			}
 			else if(j-1 >=0) 
@@ -157,7 +169,7 @@ Piece Piezas::gameState()
 						maxX = xCount;
 					xCount = 1;
 				}
-				else if(board[i][j-1] == O)
+				else if(board[i][j-1] == O )
 				{
 					if(oCount > maxO)
 						maxO = oCount;
@@ -176,16 +188,24 @@ Piece Piezas::gameState()
 		oCount = 1;
 
 		for(int j =0; j < BOARD_ROWS; j++)
-		{
+		{//in my mind I rotated the board and are counting the Rows as cols
 			
 			if(j-1 >=0 && board[j][i] == board[j-1][i]) 
 			{
 				if(board[j][i] == X )
 				{
 					xCount++;
+					if(xCount > maxX)
+						maxX = xCount;
+
+
 				}else
 				{
 					oCount++;
+					if(oCount > maxO)
+						maxO = oCount;
+
+
 				}
 			}
 			else if(BOARD_ROWS > j && j-1 >=0) 
@@ -206,8 +226,8 @@ Piece Piezas::gameState()
 			}	
 		}
 	}
-	//printf("maxX %i \n", maxX);
-	//printf("maxO %i \n", maxO);	
+	printf("maxX %i \n", maxX);
+	printf("maxO %i \n", maxO);	
 	if( maxX > maxO)
     		return X;
 	else if(maxO > maxX)
